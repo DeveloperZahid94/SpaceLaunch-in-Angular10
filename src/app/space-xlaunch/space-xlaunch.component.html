@@ -1,0 +1,68 @@
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">SpaceX Launch Programs </a>
+  </nav> -->
+  
+  <div class="row" id="body">
+    <div class="col-3 col-s-6 col-s1-12 menu">
+        <h2>Filters</h2>
+        <p id="ph">Launch Year</p><hr>
+      <div class="row" *ngFor="let year of years">
+        <div class="col-6 col-s-6 col-s1-6">
+            <button type="button" class="btn btn-success mb-2" (click)="LaunchYearFun(year.year1)">{{year.year1}}</button>
+        </div>     
+        <div class="col-6 col-s-6 col-s1-6">
+            <button type="button" class="btn btn-success mb-2" (click)="LaunchYearFun(year.year2)">{{year.year2}}</button>
+        </div>
+      </div>
+    
+    <p id="ph">Successfull Launch</p><hr>
+    <div class="row">
+      <div class="col-6 col-s-6 col-s1-6">
+        <button type="button" class="btn btn-success mb-2" (click)="LaunchProgFun('true')">True</button>
+      </div>
+    
+      <div class="col-6 col-s-6 col-s1-6">
+        <button type="button" class="btn btn-success mb-2" (click)="LaunchProgFun('false')">False</button>
+      </div>
+    </div>
+
+    <p id="ph">Successfull Landing</p><hr>
+    <div class="row">
+      <div class="col-6 col-s-6 col-s1-6">
+        <button type="button" class="btn btn-success mb-2" (click)="LandSuccessFun('true')">True</button>
+      </div>
+    
+      <div class="col-6 col-s-6 col-s1-6">
+        <button type="button" class="btn btn-success" (click)="LandSuccessFun('false')">False</button>
+      </div>
+    </div>
+</div>
+
+    <div class="col-9 col-s-6 col-s1-12" id="Disp">
+    <!-- <div class="aside"> --><h2>SpaceX Launch Program</h2><hr> 
+       
+        <table class="table-borderless mt-5">               
+            <tr *ngFor="let viewData of this.OnloadData">
+                <td>
+                    <div class="card">
+                        <div class="card-header">
+                           <img src={{viewData.links.mission_patch}} class="img"  width="280" height="200"/>
+                        </div>
+                        <div class="card-body">
+                          
+                               <p id="px"><b>{{viewData.mission_name}}#{{viewData.flight_number}}</b></p> 
+                                <p><b>Mission Ids:</b></p>
+                                    <ul>
+                                        <li>{{viewData.mission_id}}</li>
+                                    </ul>
+                                <p><b>Launch Year:</b> {{viewData.launch_year}}</p>
+                               <p><b>Successfull Launch:</b>{{viewData.launch_success}}</p>               
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    <!-- </div> -->
+  </div>
+</div><div class="Name"><h3>Developer::{{Developer}}</h3></div>
+
