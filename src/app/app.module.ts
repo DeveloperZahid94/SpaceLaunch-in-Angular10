@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpaceXLaunchComponent } from './space-xlaunch/space-xlaunch.component';
 import{HttpClientModule} from '@angular/common/http';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SpaceXLaunchComponent
+    SpaceXLaunchComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
